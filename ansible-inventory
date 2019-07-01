@@ -1,0 +1,12 @@
+[vikimanaged:children]
+ns1
+ns2
+
+[ns1]
+10.10.10.61 host_name=ns1.vikilabs.local ansible_dns_role=master
+
+[ns2]
+10.10.10.62 host_name=ns2.vikilabs.local ansible_dns_role=slave
+
+[ns2]
+10.10.10.63 host_name=ns3.vikilabs.local ansible_dns_role=slave

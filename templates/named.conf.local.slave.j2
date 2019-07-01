@@ -1,0 +1,11 @@
+zone "{{ domain }}" IN {
+    type slave;
+    file "db.{{ domain }}";
+    masters { {{ groups['ns1'][0] }}; };     # ns1 private IP address - primary master
+};
+
+zone "{{ rev_domain }}" IN {
+    type slave;
+    file "db.{{ rev_domain }}";
+    masters { {{ groups['ns1'][0] }}; };     # ns1 private IP address - primary master
+};
